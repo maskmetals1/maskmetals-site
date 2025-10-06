@@ -255,14 +255,22 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <nav className={`md:hidden fixed top-0 left-0 right-0 bg-black/98 backdrop-blur-15px z-40 transform transition-transform duration-300 ${
-        isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+      {/* Mobile Navigation Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 bg-black/50 z-40"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Mobile Navigation - Slides from Right */}
+      <nav className={`md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-black z-50 transform transition-transform duration-300 ease-in-out ${
+        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
-        <div className="container mx-auto px-4 py-6">
+        <div className="h-full flex flex-col">
           {/* Mobile Header */}
-          <div className="flex justify-between items-center mb-6">
-            <h1 className="text-2xl font-bangers text-primary-gold">
+          <div className="flex justify-between items-center p-6 border-b border-gray-800">
+            <h1 className="text-xl font-bangers text-primary-gold">
               {variant === 'spiderman' ? 'Spider-Man' : 
                variant === 'batman' ? 'BATMAN' : 
                variant === 'transformers' ? 'Transformers' : 
@@ -271,7 +279,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
             </h1>
             <button
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-primary-gold hover:text-white transition-colors"
+              className="text-gray-400 hover:text-white transition-colors p-2"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -280,7 +288,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
           </div>
           
           {/* Mobile Menu Items */}
-          <div className="space-y-4">
+          <div className="flex-1 px-6 py-8 space-y-2">
             {variant === 'home' ? (
               <>
                 <button 
@@ -288,7 +296,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     scrollToSection('home')
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   Home
                 </button>
@@ -297,7 +305,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     scrollToSection('heroes')
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   Heroes
                 </button>
@@ -306,7 +314,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     scrollToSection('about')
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   About
                 </button>
@@ -315,7 +323,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     scrollToSection('contact')
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   Contact
                 </button>
@@ -324,28 +332,28 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
               <>
                 <Link 
                   href="/#home"
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Home
                 </Link>
                 <Link 
                   href="/#heroes"
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Heroes
                 </Link>
                 <Link 
                   href="/#about"
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   About
                 </Link>
                 <Link 
                   href="/#contact"
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
@@ -355,7 +363,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
               <>
                 <Link 
                   href="/" 
-                  className="block text-primary-gold font-semibold text-lg py-3"
+                  className="block text-primary-gold font-semibold text-lg py-4 border-b border-gray-800 hover:border-primary-gold/30"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   ← Back to Heroes
@@ -365,7 +373,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     window.location.href = '/#product'
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   Product
                 </button>
@@ -374,7 +382,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     window.location.href = '/#gallery'
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   Gallery
                 </button>
@@ -383,12 +391,27 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                     window.location.href = '/#other-products'
                     setIsMobileMenuOpen(false)
                   }}
-                  className="block text-white hover:text-primary-gold transition-colors text-lg py-3 w-full text-left"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
                 >
                   More
                 </button>
               </>
             )}
+          </div>
+
+          {/* Mobile Footer */}
+          <div className="p-6 border-t border-gray-800">
+            <div className="flex items-center justify-center space-x-4">
+              <Link href="/cart" className="relative">
+                <ShoppingCart className="w-6 h-6 text-primary-gold" />
+                {getTotalItems() > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-primary-gold text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                    {getTotalItems()}
+                  </span>
+                )}
+              </Link>
+              <span className="text-gray-400 text-sm">Shopping Cart</span>
+            </div>
           </div>
         </div>
       </nav>
