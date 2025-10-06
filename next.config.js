@@ -14,6 +14,19 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   swcMinify: true,
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()'
+          }
+        ]
+      }
+    ]
+  },
 }
 
 module.exports = nextConfig
