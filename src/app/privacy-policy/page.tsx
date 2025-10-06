@@ -6,7 +6,7 @@ export default function PrivacyPolicyPage() {
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
       <Navigation variant="home" />
       
-      <div className="container mx-auto px-4 py-16 pt-24">
+      <div className="container mx-auto px-4 py-16 pt-32 md:pt-40">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bangers text-primary-gold text-center mb-12">
             Privacy Policy
