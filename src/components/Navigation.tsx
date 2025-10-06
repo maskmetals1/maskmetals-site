@@ -164,6 +164,33 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                 Contact
               </button>
             </>
+          ) : variant === 'legal' ? (
+            <>
+              <Link 
+                href="/#home"
+                className="text-white hover:text-primary-gold transition-colors font-medium"
+              >
+                Home
+              </Link>
+              <Link 
+                href="/#heroes"
+                className="text-white hover:text-primary-gold transition-colors font-medium"
+              >
+                Heroes
+              </Link>
+              <Link 
+                href="/#about"
+                className="text-white hover:text-primary-gold transition-colors font-medium"
+              >
+                About
+              </Link>
+              <Link 
+                href="/#contact"
+                className="text-white hover:text-primary-gold transition-colors font-medium"
+              >
+                Contact
+              </Link>
+            </>
           ) : variant === 'cart' ? (
             <>
               <Link 
@@ -327,6 +354,37 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                 >
                   Contact
                 </button>
+              </>
+            ) : variant === 'legal' ? (
+              <>
+                <Link 
+                  href="/#home"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/#heroes"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Heroes
+                </Link>
+                <Link 
+                  href="/#about"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  About
+                </Link>
+                <Link 
+                  href="/#contact"
+                  className="block text-white hover:text-primary-gold transition-colors text-lg py-4 w-full text-left border-b border-gray-800 hover:border-primary-gold/30"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Contact
+                </Link>
               </>
             ) : variant === 'cart' ? (
               <>
