@@ -272,17 +272,11 @@ export default function ProductSection({ products, theme }: ProductSectionProps)
                       ? `${product.name} - ${selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}`
                       : product.name
                     
-                    // Convert relative image path to absolute URL
-                    const currentImage = getCurrentMainImage()
-                    const absoluteImageUrl = currentImage.startsWith('/') 
-                      ? `${window.location.origin}${currentImage}`
-                      : currentImage
-                    
                     addToCart({
                       id: stripeInfo?.productId || `${product.id}-${selectedColor}`,
                       name: productName,
                       price: product.price,
-                      image: absoluteImageUrl
+                      image: getCurrentMainImage()
                     })
                     
                     // Show notification and View Cart button
