@@ -468,7 +468,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
                   </span>
                 )}
               </Link>
-              <span className="text-gray-400 text-sm">Shopping Cart</span>
+              <Link href="/cart" className="text-gray-400 text-sm hover:text-primary-gold transition-colors">Shopping Cart</Link>
             </div>
           </div>
         </div>

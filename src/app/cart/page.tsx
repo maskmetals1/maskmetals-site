@@ -74,7 +74,7 @@ export default function CartPage() {
 
   return (
     <main className="min-h-screen bg-dark-bg">
-      <Navigation variant="home" />
+      <Navigation variant="cart" />
       
       <div className="container mx-auto px-4 pt-40 md:pt-48 pb-24">
         <motion.div
