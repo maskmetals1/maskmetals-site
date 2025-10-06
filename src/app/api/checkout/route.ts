@@ -10,17 +10,34 @@ export async function POST(request: NextRequest) {
     }
 
     // Create line items for Stripe
-    const lineItems = items.map((item: any) => ({
-      price_data: {
-        currency: 'usd',
-        product_data: {
-          name: item.name,
-          images: [item.image],
+    const lineItems = items.map((item: any) => {
+      // Validate and fix image URL
+      let imageUrl = item.image
+      
+      // If image is not a valid URL, use a placeholder or skip images
+      if (!imageUrl || !imageUrl.startsWith('http')) {
+        // Use a placeholder image or skip images entirely
+        imageUrl = null
+      }
+      
+      const productData: any = {
+        name: item.name,
+      }
+      
+      // Only add images if we have a valid URL
+      if (imageUrl) {
+        productData.images = [imageUrl]
+      }
+      
+      return {
+        price_data: {
+          currency: 'usd',
+          product_data: productData,
+          unit_amount: Math.round(item.price * 100), // Convert to cents
         },
-        unit_amount: Math.round(item.price * 100), // Convert to cents
-      },
-      quantity: item.quantity,
-    }))
+        quantity: item.quantity,
+      }
+    })
 
     // Create Stripe checkout session with shipping options
     const session = await stripe.checkout.sessions.create({
