@@ -6,7 +6,7 @@ import { useCart } from '@/contexts/CartContext'
 import { ShoppingCart } from 'lucide-react'
 
 interface NavigationProps {
-  variant?: 'home' | 'spiderman' | 'batman' | 'transformers' | 'superman' | 'iron-man' | 'cart'
+  variant?: 'home' | 'spiderman' | 'batman' | 'transformers' | 'superman' | 'iron-man' | 'cart' | 'legal'
 }
 
 export default function Navigation({ variant = 'home' }: NavigationProps) {

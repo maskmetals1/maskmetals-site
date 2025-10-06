@@ -40,7 +40,7 @@ export default function CartPage() {
       <main className="min-h-screen bg-dark-bg">
         <Navigation variant="cart" />
         
-        <div className="container mx-auto px-4 pt-32 pb-24">
+        <div className="container mx-auto px-4 pt-40 md:pt-48 pb-24">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ export default function CartPage() {
     <main className="min-h-screen bg-dark-bg">
       <Navigation variant="home" />
       
-      <div className="container mx-auto px-4 pt-32 pb-24">
+      <div className="container mx-auto px-4 pt-40 md:pt-48 pb-24">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
