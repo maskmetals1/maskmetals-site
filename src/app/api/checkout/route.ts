@@ -11,12 +11,16 @@ export async function POST(request: NextRequest) {
 
     // Create line items for Stripe
     const lineItems = items.map((item: any) => {
-      // Validate and fix image URL
+      // Convert relative image paths to absolute URLs
       let imageUrl = item.image
       
-      // If image is not a valid URL, use a placeholder or skip images
+      // If it's a relative path, convert to absolute URL
+      if (imageUrl && imageUrl.startsWith('/')) {
+        imageUrl = `${request.nextUrl.origin}${imageUrl}`
+      }
+      
+      // If image is still not a valid URL, skip images
       if (!imageUrl || !imageUrl.startsWith('http')) {
-        // Use a placeholder image or skip images entirely
         imageUrl = null
       }
       
@@ -24,7 +28,7 @@ export async function POST(request: NextRequest) {
         name: item.name,
       }
       
-      // Only add images if we have a valid URL
+      // Only add images if we have a valid absolute URL
       if (imageUrl) {
         productData.images = [imageUrl]
       }
