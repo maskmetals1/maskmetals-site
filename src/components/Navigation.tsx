@@ -101,7 +101,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
       isScrolled ? '-translate-y-full' : 'translate-y-0'
-    } bg-black border-b border-opacity-10 ${styles.borderColor}`}>
+    } bg-black border-b border-opacity-10 ${styles.borderColor}`} style={{ backgroundColor: '#000000' }}>
       <div className="container mx-auto px-4 py-6 flex justify-between items-center">
         {/* Logo Section */}
         <div className="flex flex-col items-start">
@@ -266,7 +266,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
       {/* Mobile Navigation - Slides from Right */}
       <nav className={`md:hidden fixed top-0 right-0 h-full w-64 max-w-[75vw] bg-black z-50 transform transition-transform duration-300 ease-in-out ${
         isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-      }`}>
+      }`} style={{ backgroundColor: '#000000' }}>
         <div className="h-full flex flex-col">
           {/* Mobile Header */}
           <div className="flex justify-between items-center p-6 border-b border-gray-800">
