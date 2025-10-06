@@ -72,7 +72,7 @@ export default function BatmanPage() {
       <Navigation variant="batman" />
       
       {/* Hero Banner */}
-      <section className="relative pt-2">
+      <section className="relative pt-0">
         <HeroBanner 
           image="/images/batman/Batman_Banner.jpg"
           alt="Batman Banner"

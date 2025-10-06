@@ -77,7 +77,7 @@ export default function SpiderManPage() {
       <Navigation variant="spiderman" />
       
       {/* Hero Banner */}
-      <section className="relative spider-banner pt-2">
+      <section className="relative spider-banner pt-0">
         <HeroBanner 
           image="/images/spiderman/manpfpbanner.jpg"
           alt="Spider-Man Banner"
