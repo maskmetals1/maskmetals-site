@@ -93,7 +93,7 @@ export default function TransformersPage() {
       <Navigation variant="transformers" />
       
       {/* Hero Banner */}
-      <section className="relative pt-8">
+      <section className="relative pt-2">
         <HeroBanner 
           image="/images/transformers/dbl5lu1-528855a2-d961-4e5d-b7eb-b088db142382.jpg"
           alt="Transformers Banner"
