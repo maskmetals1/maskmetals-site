@@ -1,4 +1,5 @@
-import { Instagram, Video } from 'lucide-react'
+import { Instagram } from 'lucide-react'
+import TikTokIcon from './TikTokIcon'
 
 export default function HomeFooter() {
   return (
@@ -24,7 +25,7 @@ export default function HomeFooter() {
                 className="text-primary-gold hover:text-white transition-colors"
                 aria-label="TikTok"
               >
-                <Video className="w-6 h-6" />
+                <TikTokIcon className="w-6 h-6" />
               </a>
             </div>
           </div>
