@@ -1,4 +1,4 @@
-import { Instagram, Music } from 'lucide-react'
+import { Instagram, Video } from 'lucide-react'
 
 export default function HomeFooter() {
   return (
@@ -24,7 +24,7 @@ export default function HomeFooter() {
                 className="text-primary-gold hover:text-white transition-colors"
                 aria-label="TikTok"
               >
-                <Music className="w-6 h-6" />
+                <Video className="w-6 h-6" />
               </a>
             </div>
           </div>
