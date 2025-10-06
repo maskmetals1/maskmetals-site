@@ -267,7 +267,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
       <nav className={`md:hidden fixed top-0 right-0 h-full w-64 max-w-[75vw] bg-black z-50 transform transition-transform duration-300 ease-in-out ${
         isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
       }`} style={{ backgroundColor: '#000000' }}>
-        <div className="h-full flex flex-col">
+        <div className="h-full flex flex-col" style={{ backgroundColor: '#000000' }}>
           {/* Mobile Header */}
           <div className="flex justify-between items-center p-6 border-b border-gray-800">
             <h1 className="text-xl font-bangers text-primary-gold">
@@ -288,7 +288,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
           </div>
           
           {/* Mobile Menu Items */}
-          <div className="flex-1 px-6 py-8 space-y-2">
+          <div className="flex-1 px-6 py-8 space-y-2" style={{ backgroundColor: '#000000' }}>
             {variant === 'home' ? (
               <>
                 <button 
@@ -400,7 +400,7 @@ export default function Navigation({ variant = 'home' }: NavigationProps) {
           </div>
 
           {/* Mobile Footer */}
-          <div className="p-6 border-t border-gray-800">
+          <div className="p-6 border-t border-gray-800" style={{ backgroundColor: '#000000' }}>
             <div className="flex items-center justify-center space-x-4">
               <Link href="/cart" className="relative">
                 <ShoppingCart className="w-6 h-6 text-primary-gold" />
