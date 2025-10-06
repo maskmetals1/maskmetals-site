@@ -1,0 +1,55 @@
+export default function Footer() {
+  return (
+    <footer className="bg-black/95 border-t border-primary-gold/20 py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 className="text-2xl font-bangers text-primary-gold mb-4">Mask Medals</h3>
+            <p className="text-text-secondary mb-4">
+              Premium superhero merchandise for fans worldwide.
+            </p>
+            <p className="text-text-secondary text-sm">
+              High-quality metal decals featuring your favorite heroes.
+            </p>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-primary-gold mb-4">Products</h4>
+            <ul className="space-y-2 text-text-secondary">
+              <li><a href="/spiderman" className="hover:text-primary-gold transition-colors">Spider-Man</a></li>
+              <li><a href="/batman" className="hover:text-primary-gold transition-colors">Batman</a></li>
+              <li><a href="/transformers" className="hover:text-primary-gold transition-colors">Transformers</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">More Heroes</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-primary-gold mb-4">Support</h4>
+            <ul className="space-y-2 text-text-secondary">
+              <li><a href="#" className="hover:text-primary-gold transition-colors">Contact Us</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">Shipping Info</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">Returns</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">FAQ</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h4 className="text-lg font-semibold text-primary-gold mb-4">Company</h4>
+            <ul className="space-y-2 text-text-secondary">
+              <li><a href="#" className="hover:text-primary-gold transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-primary-gold transition-colors">Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-primary-gold/20 pt-8 text-center">
+          <p className="text-text-secondary">
+            &copy; 2025 Mask Medals. All rights reserved. | Superhero merchandise for fans worldwide.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}
