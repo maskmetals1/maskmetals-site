@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter, Bangers, Orbitron } from 'next/font/google'
 import { CartProvider } from '@/contexts/CartContext'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const inter = Inter({ 
@@ -67,6 +69,8 @@ export default function RootLayout({
         <CartProvider>
           {children}
         </CartProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
