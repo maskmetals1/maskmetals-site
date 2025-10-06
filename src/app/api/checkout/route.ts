@@ -51,16 +51,7 @@ export async function POST(request: NextRequest) {
       cancel_url: `${request.nextUrl.origin}/cart`,
       shipping_address_collection: {
         allowed_countries: [
-          // North America
-          'US', 'CA', 'MX',
-          // Europe
-          'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'CH', 'SE', 'NO', 'DK', 'FI', 'IE', 'PT', 'GR', 'PL', 'CZ', 'HU', 'SK', 'SI', 'HR', 'BG', 'RO', 'LT', 'LV', 'EE', 'CY', 'MT', 'LU', 'IS', 'LI', 'MC', 'SM', 'VA', 'AD',
-          // Asia Pacific
-          'AU', 'NZ', 'JP', 'KR', 'SG', 'HK', 'TW', 'MY', 'TH', 'VN', 'ID', 'PH', 'IN', 'BD', 'PK', 'LK', 'NP', 'BT', 'MV', 'MM', 'KH', 'LA', 'BN', 'TL', 'CN', 'MN', 'KZ', 'UZ', 'KG', 'TJ', 'TM',
-          // Middle East & Africa
-          'AE', 'SA', 'QA', 'BH', 'KW', 'OM', 'YE', 'TR', 'GE', 'AM', 'AZ', 'RU', 'BY', 'UA', 'MD', 'AL', 'MK', 'ME', 'RS', 'BA', 'ZA', 'EG', 'LY', 'TN', 'DZ', 'MA', 'SD', 'ET', 'KE', 'UG', 'TZ', 'RW', 'BI', 'DJ', 'SO', 'ER', 'MW', 'ZM', 'ZW', 'BW', 'NA', 'SZ', 'LS', 'MG', 'MU', 'SC', 'KM', 'YT', 'RE', 'MZ', 'AO', 'CD', 'CG', 'CM', 'CF', 'TD', 'GQ', 'GA', 'ST', 'GH', 'TG', 'BJ', 'BF', 'ML', 'NE', 'NG', 'SN', 'GM', 'GN', 'GW', 'LR', 'SL', 'CI', 'CV', 'MR',
-          // South America
-          'BR', 'AR', 'CL', 'CO', 'PE', 'VE', 'EC', 'BO', 'PY', 'UY', 'GY', 'SR', 'GF', 'FK'
+          'US', 'CA', 'MX', 'GB', 'DE', 'FR', 'IT', 'ES', 'NL', 'BE', 'AT', 'CH', 'SE', 'NO', 'DK', 'FI', 'IE', 'PT', 'GR', 'PL', 'CZ', 'HU', 'SK', 'SI', 'HR', 'BG', 'RO', 'LT', 'LV', 'EE', 'CY', 'MT', 'LU', 'IS', 'LI', 'MC', 'SM', 'VA', 'AD', 'AU', 'NZ', 'JP', 'KR', 'SG', 'HK', 'TW', 'MY', 'TH', 'VN', 'ID', 'PH', 'IN', 'BD', 'PK', 'LK', 'NP', 'BT', 'MV', 'MM', 'KH', 'LA', 'BN', 'TL', 'CN', 'MN', 'KZ', 'UZ', 'KG', 'TJ', 'TM', 'AF', 'IQ', 'SY', 'LB', 'JO', 'IL', 'PS', 'SA', 'AE', 'QA', 'BH', 'KW', 'OM', 'YE', 'TR', 'GE', 'AM', 'AZ', 'RU', 'BY', 'UA', 'MD', 'AL', 'MK', 'ME', 'RS', 'BA', 'BR', 'AR', 'CL', 'CO', 'PE', 'VE', 'EC', 'BO', 'PY', 'UY', 'GY', 'SR', 'GF', 'FK', 'ZA', 'EG', 'LY', 'TN', 'DZ', 'MA', 'SD', 'ET', 'KE', 'UG', 'TZ', 'RW', 'BI', 'DJ', 'SO', 'ER', 'MW', 'ZM', 'ZW', 'BW', 'NA', 'SZ', 'LS', 'MG', 'MU', 'SC', 'KM', 'YT', 'RE', 'MZ', 'AO', 'CD', 'CG', 'CM', 'CF', 'TD', 'GQ', 'GA', 'ST', 'GH', 'TG', 'BJ', 'BF', 'ML', 'NE', 'NG', 'SN', 'GM', 'GN', 'GW', 'LR', 'SL', 'CI', 'CV', 'MR'
         ]
       },
       shipping_options: [
